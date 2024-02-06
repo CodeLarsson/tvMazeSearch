@@ -62,6 +62,6 @@ type TvMazeShowNetwork = {
 };
 
 type TvMazeShowImage = {
-  medium: string;
-  original: string;
+  medium?: string;
+  original?: string;
 };

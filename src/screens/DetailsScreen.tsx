@@ -43,11 +43,11 @@ export const DetailsScreen = ({route}: DetailsScreenProps) => {
           <Text style={{color: colors.text, ...styles.headingText}}>
             {tvShow?.name}
           </Text>
-          {tvShow?.image.medium && (
+          {tvShow?.image?.medium && (
             <Image
               style={localStyle.showImage}
               source={{
-                uri: tvShow?.image.medium,
+                uri: tvShow?.image?.medium,
               }}
             />
           )}
