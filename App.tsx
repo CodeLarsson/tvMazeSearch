@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import {Text, View, useColorScheme} from 'react-native';
+import {useColorScheme} from 'react-native';
 import {HomeScreen} from './src/screens/HomeScreen';
 import {ProfileScreen} from './src/screens/ProfileScreen';
 import {SearchScreen} from './src/screens/SearchScreen';
