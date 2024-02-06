@@ -46,6 +46,13 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
+## About
+
+Use the search box to query the TV Maze API for a show. The results will be displayed in a list.
+Select "View details", to see the details of the show.
+
+The application has thre three screens: Home, Search and Details. There is a Profile screen, but I did not have time to implement it.
+
 ## If I had more time
 
 I have focused more on styling and accessibility. Now, with the constraints of time I just wanted to get something up and running.
