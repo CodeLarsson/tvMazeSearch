@@ -34,6 +34,7 @@ export const HomeScreen = ({navigation}: HomeScreenProps) => {
           </Text>
           <View style={localstyles.buttonRow}>
             <Button
+              testID="tid-to-search-button"
               title="Go to Search"
               onPress={() => {
                 navigation.navigate('Search');

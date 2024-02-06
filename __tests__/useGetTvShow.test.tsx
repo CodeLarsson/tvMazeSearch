@@ -1,35 +1,35 @@
 import {enableFetchMocks} from 'jest-fetch-mock';
 enableFetchMocks();
-import fetchMock from 'jest-fetch-mock';
 
 import 'react-native';
 
-// Note: import explicitly to use the types shipped with jest.
-import {it, expect, beforeEach} from '@jest/globals';
-import {TvMazeShow} from '../src/types/tv-maze-show';
-import {renderHook, act} from '@testing-library/react-native';
+import {it, expect, describe, beforeEach} from '@jest/globals';
+import {renderHook, waitFor} from '@testing-library/react-native';
 import {useGetTvShow} from '../src/hooks/useGetTvShow';
+import fetchMock from 'jest-fetch-mock';
 
-
-beforeEach(() => {
-  fetchMock.resetMocks();
-});
-
-it('API Returns OK', () => {
-  const show: Partial<TvMazeShow> = {
-    id: 1,
-    name: 'test',
-    genres: ['test'],
-    rating: {average: 1},
-  };
-
-  const {result} = renderHook((showId: number) => useGetTvShow(showId), {
-    initialProps: show.id,
+describe('Test useGetTvShow', () => {
+  beforeEach(() => {
+    fetchMock.resetMocks();
   });
 
-  act(() => {
-    fetchMock.mockResponseOnce(JSON.stringify(show));
+  it('API Returns OK', async () => {
+    fetchMock.mockResponseOnce(
+      JSON.stringify({
+        id: 230,
+        name: 'Breaking Bad',
+      }),
+    );
 
-    expect(result.current).toEqual(show);
+    const {result} = renderHook(() => useGetTvShow(230));
+    expect(result.current).toBeUndefined();
+
+    // Ensure to assert the value within the hook's result
+    await waitFor(() => {
+      expect(result.current).toEqual({
+        id: 230,
+        name: 'Breaking Bad',
+      });
+    });
   });
 });

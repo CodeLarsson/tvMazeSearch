@@ -40,9 +40,9 @@ type TvMazeShowExternal = {
 };
 
 type TvMazeShowLinks = {
-  self: string;
-  previousepisode: string;
-  nextepisode: string;
+  self: {href: string};
+  previousepisode: {href: string};
+  nextepisode?: {href: string};
 };
 
 type TvMazeShowSchedule = {
@@ -58,6 +58,7 @@ type TvMazeShowNetwork = {
     code: string;
     timezone: string;
   };
+  officialSite: string;
 };
 
 type TvMazeShowImage = {

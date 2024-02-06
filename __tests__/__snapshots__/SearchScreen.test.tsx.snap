@@ -1,0 +1,623 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchScreen renders correctly 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "rgb(242, 242, 242)",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 24,
+    }
+  }
+>
+  <RCTScrollView
+    ListHeaderComponent={
+      <React.Fragment>
+        <View>
+          <Text
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 24,
+                "fontWeight": "bold",
+                "lineHeight": 32,
+              }
+            }
+          >
+            Search
+          </Text>
+          <Text
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 18,
+                "letterSpacing": 0.25,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Search for your favourite TV shows using the TV Maze API
+          </Text>
+        </View>
+        <TextInput
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="TV Show Name"
+          placeholderTextColor="rgb(28, 28, 30)"
+          style={
+            {
+              "borderColor": "rgb(28, 28, 30)",
+              "borderWidth": 1,
+              "height": 40,
+              "marginTop": 24,
+              "padding": 10,
+            }
+          }
+          testID="tid-search-input"
+          value=""
+        />
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "gap": 16,
+              "marginBottom": 24,
+              "marginTop": 24,
+            }
+          }
+        >
+          <Button
+            disabled={true}
+            onPress={[Function]}
+            testID="tid-search-button"
+            title="Search"
+          />
+          <Button
+            disabled={true}
+            onPress={[Function]}
+            testID="tid-search-clear-button"
+            title="Clear"
+          />
+        </View>
+        <View>
+          
+        </View>
+      </React.Fragment>
+    }
+    data={[]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    style={
+      {
+        "padding": 24,
+        "width": 750,
+      }
+    }
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+      >
+        <View>
+          <Text
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 24,
+                "fontWeight": "bold",
+                "lineHeight": 32,
+              }
+            }
+          >
+            Search
+          </Text>
+          <Text
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 18,
+                "letterSpacing": 0.25,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Search for your favourite TV shows using the TV Maze API
+          </Text>
+        </View>
+        <TextInput
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="TV Show Name"
+          placeholderTextColor="rgb(28, 28, 30)"
+          style={
+            {
+              "borderColor": "rgb(28, 28, 30)",
+              "borderWidth": 1,
+              "height": 40,
+              "marginTop": 24,
+              "padding": 10,
+            }
+          }
+          testID="tid-search-input"
+          value=""
+        />
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "gap": 16,
+              "marginBottom": 24,
+              "marginTop": 24,
+            }
+          }
+        >
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": true,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+            testID="tid-search-button"
+          >
+            <View
+              style={
+                [
+                  {},
+                  {},
+                ]
+              }
+            >
+              <Text
+                disabled={true}
+                style={
+                  [
+                    {
+                      "color": "#007AFF",
+                      "fontSize": 18,
+                      "margin": 8,
+                      "textAlign": "center",
+                    },
+                    {
+                      "color": "#cdcdcd",
+                    },
+                  ]
+                }
+              >
+                Search
+              </Text>
+            </View>
+          </View>
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": true,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+            testID="tid-search-clear-button"
+          >
+            <View
+              style={
+                [
+                  {},
+                  {},
+                ]
+              }
+            >
+              <Text
+                disabled={true}
+                style={
+                  [
+                    {
+                      "color": "#007AFF",
+                      "fontSize": 18,
+                      "margin": 8,
+                      "textAlign": "center",
+                    },
+                    {
+                      "color": "#cdcdcd",
+                    },
+                  ]
+                }
+              >
+                Clear
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View />
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;
+
+exports[`Test Component SearchScreen Renders correctly 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "rgb(242, 242, 242)",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 24,
+    }
+  }
+>
+  <RCTScrollView
+    ListHeaderComponent={
+      <React.Fragment>
+        <View>
+          <Text
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 24,
+                "fontWeight": "bold",
+                "lineHeight": 32,
+              }
+            }
+          >
+            Search
+          </Text>
+          <Text
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 18,
+                "letterSpacing": 0.25,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Search for your favourite TV shows using the TV Maze API
+          </Text>
+        </View>
+        <TextInput
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="TV Show Name"
+          placeholderTextColor="rgb(28, 28, 30)"
+          style={
+            {
+              "borderColor": "rgb(28, 28, 30)",
+              "borderWidth": 1,
+              "height": 40,
+              "marginTop": 24,
+              "padding": 10,
+            }
+          }
+          testID="tid-search-input"
+          value=""
+        />
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "gap": 16,
+              "marginBottom": 24,
+              "marginTop": 24,
+            }
+          }
+        >
+          <Button
+            disabled={true}
+            onPress={[Function]}
+            testID="tid-search-button"
+            title="Search"
+          />
+          <Button
+            disabled={true}
+            onPress={[Function]}
+            testID="tid-search-clear-button"
+            title="Clear"
+          />
+        </View>
+        <View>
+          
+        </View>
+      </React.Fragment>
+    }
+    data={[]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    style={
+      {
+        "padding": 24,
+        "width": 750,
+      }
+    }
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+      >
+        <View>
+          <Text
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 24,
+                "fontWeight": "bold",
+                "lineHeight": 32,
+              }
+            }
+          >
+            Search
+          </Text>
+          <Text
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 18,
+                "letterSpacing": 0.25,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Search for your favourite TV shows using the TV Maze API
+          </Text>
+        </View>
+        <TextInput
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="TV Show Name"
+          placeholderTextColor="rgb(28, 28, 30)"
+          style={
+            {
+              "borderColor": "rgb(28, 28, 30)",
+              "borderWidth": 1,
+              "height": 40,
+              "marginTop": 24,
+              "padding": 10,
+            }
+          }
+          testID="tid-search-input"
+          value=""
+        />
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "gap": 16,
+              "marginBottom": 24,
+              "marginTop": 24,
+            }
+          }
+        >
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": true,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+            testID="tid-search-button"
+          >
+            <View
+              style={
+                [
+                  {},
+                  {},
+                ]
+              }
+            >
+              <Text
+                disabled={true}
+                style={
+                  [
+                    {
+                      "color": "#007AFF",
+                      "fontSize": 18,
+                      "margin": 8,
+                      "textAlign": "center",
+                    },
+                    {
+                      "color": "#cdcdcd",
+                    },
+                  ]
+                }
+              >
+                Search
+              </Text>
+            </View>
+          </View>
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": true,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+            testID="tid-search-clear-button"
+          >
+            <View
+              style={
+                [
+                  {},
+                  {},
+                ]
+              }
+            >
+              <Text
+                disabled={true}
+                style={
+                  [
+                    {
+                      "color": "#007AFF",
+                      "fontSize": 18,
+                      "margin": 8,
+                      "textAlign": "center",
+                    },
+                    {
+                      "color": "#cdcdcd",
+                    },
+                  ]
+                }
+              >
+                Clear
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View />
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;

@@ -48,12 +48,6 @@ This is one way to run your app — you can also run it directly from within And
 
 ## If I had more time
 
-I failed to get the testing environment working within the stated time. I just couldn't get Jest working correctly.
-
-I also would have spent more time on styling and accesability if I had more time. Since the instructions said that the assignment should take around 5 hours to complete I wanted to stay within that limit.
-
-Since I am familliar to React, but not React Native, it took a little longer for me to get up on speed about which components to use and how to set up the routing screens.
-
-I also would have liked to implement more features, like a user profile and a list of favourite shows.
-
-Over all I am not super pleased with the what I have made, however, since I have not worked with React Native before, I think it went better than I had expected.
+I have focused more on styling and accessibility. Now, with the constraints of time I just wanted to get something up and running.
+I would also have focused a bit more on the testing of the code. I hade some issues with testing the hook functions.
+Also, I would like to have implemented the profile functionality in the app. So that user could have a favourite list of shows.

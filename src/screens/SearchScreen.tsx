@@ -82,6 +82,7 @@ export const SearchScreen = ({navigation}: SearchScreenProps) => {
             </View>
 
             <TextInput
+              testID="tid-search-input"
               style={localstyles.input}
               placeholder="TV Show Name"
               placeholderTextColor={colors.text}
@@ -91,11 +92,13 @@ export const SearchScreen = ({navigation}: SearchScreenProps) => {
             />
             <View style={localstyles.buttonRow}>
               <Button
+                testID="tid-search-button"
                 title="Search"
                 onPress={handleSearch}
                 disabled={!queryInput}
               />
               <Button
+                testID="tid-search-clear-button"
                 title="Clear"
                 onPress={handleClear}
                 disabled={!queryInput}

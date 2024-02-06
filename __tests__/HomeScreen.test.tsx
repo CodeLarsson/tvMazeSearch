@@ -1,24 +1,31 @@
 import 'react-native';
 import React from 'react';
 import {HomeScreen} from '../src/screens/HomeScreen';
-import 'react-native-gesture-handler/jestSetup';
 
-// Note: import explicitly to use the types shipped with jest.
 import {it, describe, expect, jest} from '@jest/globals';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+import {render, act, screen, fireEvent} from '@testing-library/react-native';
 
-jest.mock('@react-navigation/native', () => ({
-  useNavigation: () => ({
-    navigate: jest.fn(),
-  }),
-}));
-
-describe('HomeScreen', () => {
+describe('Test HomeScreen', () => {
+  const props: any = {
+    navigation: {
+      navigate: jest.fn(),
+    },
+  };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<HomeScreen  />).toJSON();
+    const tree = render(<HomeScreen {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it('click the button navigates to the search screen', () => {
+    render(<HomeScreen {...props} />);
+
+    act(() => {
+      const button = screen.getByTestId('tid-to-search-button');
+
+      fireEvent.press(button);
+      expect(props.navigation.navigate).toBeCalledWith('Search');
+    });
   });
 });
