@@ -4,10 +4,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {TvMazeShow} from '../types/tv-maze-show';
 import {useTheme} from '@react-navigation/native';
 import styles from './styles';
+import {AppSettings} from '../utils/AppSettings';
 
 export const ProfileScreen = () => {
-  const IDS_STORAGE_KEY = 'favouritesIds';
-
   const [favourites, setFavourites] = useState<TvMazeShow[]>([]);
 
   const readFavouriteShowsFromStorage = async (ids: string[]) => {
@@ -18,7 +17,7 @@ export const ProfileScreen = () => {
     return items;
   };
   const getFavouriteIdsFromStorage = async (): Promise<string[] | null> => {
-    const ids = await AsyncStorage.getItem(IDS_STORAGE_KEY);
+    const ids = await AsyncStorage.getItem(AppSettings.asyncStorageIdsKey);
     return ids ? JSON.parse(ids) : null;
   };
 

@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {TvMazeShowResponse} from '../types/tv-maze-show';
+import {AppSettings} from '../utils/AppSettings';
 
 export const useTvShowSearch = () => {
   const [query, setQuery] = useState('');
@@ -12,7 +13,7 @@ export const useTvShowSearch = () => {
     const fetchData = async (q: string) => {
       try {
         const response = await fetch(
-          `https://api.tvmaze.com/search/shows?q=${q}`,
+          `${AppSettings.apiUrl}search/shows?q=${q}`,
           {
             method: 'GET',
           },

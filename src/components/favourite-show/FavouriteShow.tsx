@@ -3,13 +3,12 @@ import React, {useEffect, useState} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {TvMazeShow} from '../../types/tv-maze-show';
 import {Button, View} from 'react-native';
+import {AppSettings} from '../../utils/AppSettings';
 
 type FavouriteShowProps = {
   show: TvMazeShow;
 };
 export const FavouriteShow = ({show}: FavouriteShowProps) => {
-  const IDS_STORAGE_KEY = 'favouritesIds';
-
   const [favourite, setFavourite] = useState<TvMazeShow | null>(null);
 
   const handlePress = () => {
@@ -22,16 +21,18 @@ export const FavouriteShow = ({show}: FavouriteShowProps) => {
     }
 
     const getIdsFromAsyncStore = async (): Promise<string[]> => {
-      const ids = await AsyncStorage.getItem(IDS_STORAGE_KEY);
+      const ids = await AsyncStorage.getItem(AppSettings.asyncStorageIdsKey);
       return ids ? JSON.parse(ids) : [];
     };
     const updateAsyncStorage = async () => {
       const ids = await getIdsFromAsyncStore();
 
-      if (ids && ids.length > 0) {
+      if (ids && Array.isArray(ids)) {
         ids.push(String(favourite.id));
-        console.log(1, ids);
-        await AsyncStorage.setItem(IDS_STORAGE_KEY, JSON.stringify(ids));
+        await AsyncStorage.setItem(
+          AppSettings.asyncStorageIdsKey,
+          JSON.stringify(ids),
+        );
         await AsyncStorage.setItem(
           String(favourite.id),
           JSON.stringify(favourite),
