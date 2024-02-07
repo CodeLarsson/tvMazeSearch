@@ -58,3 +58,7 @@ The application has thre three screens: Home, Search and Details. There is a Pro
 I have focused more on styling and accessibility. Now, with the constraints of time I just wanted to get something up and running.
 I would also have focused a bit more on the testing of the code. I hade some issues with testing the hook functions.
 Also, I would like to have implemented the profile functionality in the app. So that user could have a favourite list of shows.
+
+### Continuation...
+
+Look at the branch feature/continuation, where I spent more time.
