@@ -3,6 +3,7 @@ import {TvMazeShow} from '../../types/tv-maze-show';
 import {View, Text, Pressable} from 'react-native';
 import styles from './styles';
 import {useTheme} from '@react-navigation/native';
+import {FavouriteShow} from '../favourite-show/FavouriteShow';
 
 type SearchResultListItemProps = {
   show: TvMazeShow;
@@ -42,6 +43,7 @@ export const SearchResultListItem = ({
         <Pressable onPress={handleOnPress}>
           <Text>View Details</Text>
         </Pressable>
+        <FavouriteShow show={show} />
       </View>
     </View>
   );
