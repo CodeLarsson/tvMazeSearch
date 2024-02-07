@@ -2,8 +2,10 @@ import React, {useEffect, useState} from 'react';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {TvMazeShow} from '../../types/tv-maze-show';
-import {Button, View} from 'react-native';
+import {View} from 'react-native';
 import {AppSettings} from '../../utils/AppSettings';
+import {IconButton} from '../buttons/IconButton';
+import {Heart} from 'iconoir-react-native';
 
 type FavouriteShowProps = {
   show: TvMazeShow;
@@ -45,7 +47,12 @@ export const FavouriteShow = ({show}: FavouriteShowProps) => {
 
   return (
     <View>
-      <Button onPress={handlePress} title="Add to favourites" />
+      <IconButton
+        Icon={Heart}
+        onPress={handlePress}
+        title="Add to favourites"
+        iconSize={14}
+      />
     </View>
   );
 };

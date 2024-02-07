@@ -1,9 +1,11 @@
 import React from 'react';
 import {TvMazeShow} from '../../types/tv-maze-show';
-import {View, Text, Pressable} from 'react-native';
+import {View, Text} from 'react-native';
 import styles from './styles';
 import {useTheme} from '@react-navigation/native';
 import {FavouriteShow} from '../favourite-show/FavouriteShow';
+import {IconButton} from '../buttons/IconButton';
+import {Tv} from 'iconoir-react-native';
 
 type SearchResultListItemProps = {
   show: TvMazeShow;
@@ -40,9 +42,12 @@ export const SearchResultListItem = ({
         <Text>Rating: {show.rating.average ?? 'N/A'}</Text>
       </View>
       <View style={styles.listItemFooter}>
-        <Pressable onPress={handleOnPress}>
-          <Text>View Details</Text>
-        </Pressable>
+        <IconButton
+          Icon={Tv}
+          onPress={handleOnPress}
+          iconSize={14}
+          title="View detials"
+        />
         <FavouriteShow show={show} />
       </View>
     </View>
