@@ -9,6 +9,8 @@ type IconButtonProps = {
   title?: string;
   iconSize?: number;
   titleTextSize?: number;
+  testID?: string;
+  disabled?: boolean;
 };
 
 export const IconButton = ({
@@ -18,6 +20,7 @@ export const IconButton = ({
   title,
   iconSize,
   titleTextSize,
+  disabled,
 }: IconButtonProps) => {
   const {colors} = useTheme();
 
@@ -44,6 +47,7 @@ export const IconButton = ({
 
   return (
     <TouchableHighlight
+      disabled={disabled}
       onPress={onPress}
       activeOpacity={0.6}
       underlayColor={colors.background}

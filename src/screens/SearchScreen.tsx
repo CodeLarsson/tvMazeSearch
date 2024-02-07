@@ -3,7 +3,6 @@ import {
   View,
   Text,
   TextInput,
-  Button,
   FlatList,
   StyleSheet,
   useWindowDimensions,
@@ -13,6 +12,8 @@ import styles from './styles';
 import {useTheme} from '@react-navigation/native';
 import {useTvShowSearch} from '../hooks/useTvShowSearch';
 import {SearchResultListItem} from '../components/search-result-list-item/SearchResultListItem';
+import {IconButton} from '../components/buttons/IconButton';
+import {Search, Xmark} from 'iconoir-react-native';
 
 type SearchScreenProps = {
   navigation: any;
@@ -91,17 +92,21 @@ export const SearchScreen = ({navigation}: SearchScreenProps) => {
               onSubmitEditing={() => handleSearch()}
             />
             <View style={localstyles.buttonRow}>
-              <Button
+              <IconButton
                 testID="tid-search-button"
                 title="Search"
+                titleTextSize={16}
                 onPress={handleSearch}
                 disabled={!queryInput}
+                Icon={Search}
               />
-              <Button
+              <IconButton
                 testID="tid-search-clear-button"
                 title="Clear"
+                titleTextSize={16}
                 onPress={handleClear}
                 disabled={!queryInput}
+                Icon={Xmark}
               />
             </View>
             <View>

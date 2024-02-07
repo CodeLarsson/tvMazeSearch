@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text, ScrollView, Button, StyleSheet} from 'react-native';
+import {View, Text, ScrollView, StyleSheet} from 'react-native';
 
 import styles from './styles';
 import {useTheme} from '@react-navigation/native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../App';
+import {IconButton} from '../components/buttons/IconButton';
+import {Search} from 'iconoir-react-native';
 
 type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -33,7 +35,9 @@ export const HomeScreen = ({navigation}: HomeScreenProps) => {
             Search for your favourite TV shows using the TV Maze API
           </Text>
           <View style={localstyles.buttonRow}>
-            <Button
+            <IconButton
+              Icon={Search}
+              titleTextSize={16}
               testID="tid-to-search-button"
               title="Go to Search"
               onPress={() => {
